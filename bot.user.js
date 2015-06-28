@@ -17,7 +17,7 @@ Array.prototype.peek = function() {
 };
 
 $.get('https://raw.githubusercontent.com/Apostolique/Agar.io-bot/master/bot.user.js?1', function(data) {
-    var latestVersion = data.replace(/(\r\n|\n|\r)/gm,"");
+    var latestVersion = data.replace(/(\r\n|\n|\r)/gm,"\r");
     latestVersion = latestVersion.substring(latestVersion.indexOf("// @version")+11,latestVersion.indexOf("// @grant"));
 
     latestVersion = parseFloat(latestVersion + 0.0000);
